@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import defaultIcons from "./Icons";
+import I18n from '../../../i18n';
 import FlipCard from "react-native-flip-card";
 
 const BASE_SIZE = { width: 300, height: 190 };
@@ -145,7 +146,7 @@ export default class CardView extends Component {
                 { !name ? placeholder.name : name.toUpperCase() }
               </Text>
               <Text style={[s.baseText, { fontFamily }, s.expiryLabel, s.placeholder, focused === "expiry" && s.focused]}>
-                MONTH/YEAR
+                {I18n.t('MONTH_YEAR')}
               </Text>
               <Text style={[s.baseText, { fontFamily }, s.expiry, !expiry && s.placeholder, focused === "expiry" && s.focused]}>
                 { !expiry ? placeholder.expiry : expiry }
