@@ -39,7 +39,7 @@ const CARD_NUMBER_INPUT_WIDTH_OFFSET = 40;
 const CARD_NUMBER_INPUT_WIDTH = Dimensions.get("window").width - EXPIRY_INPUT_WIDTH - CARD_NUMBER_INPUT_WIDTH_OFFSET;
 const NAME_INPUT_WIDTH = CARD_NUMBER_INPUT_WIDTH;
 const PREVIOUS_FIELD_OFFSET = 40;
-const POSTAL_CODE_INPUT_WIDTH = 70;
+const POSTAL_CODE_INPUT_WIDTH = 140;
 
 /* eslint react/prop-types: 0 */ // https://github.com/yannickcr/eslint-plugin-react/issues/106
 export default class CreditCardInput extends Component {
@@ -81,7 +81,7 @@ export default class CreditCardInput extends Component {
       number: "1234 5678 1234 5678",
       expiry: "MM/YY",
       cvc: "CVC",
-      postalCode: "34567",
+      postalCode: "A1A 1A1",
     },
     inputContainerStyle: {
       borderBottomWidth: 1,
