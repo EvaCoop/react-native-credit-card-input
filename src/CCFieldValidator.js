@@ -21,7 +21,7 @@ export default class CCFieldValidator {
     const expiryValidation = valid.expirationDate(formValues.expiry);
     const maxCVCLength = (numberValidation.card || FALLBACK_CARD).code.size;
     const cvcValidation = valid.cvv(formValues.cvc, maxCVCLength);
-
+    console.log("POSTAL", formValues.postalCode);
     const validationStatuses = pick({
       number: toStatus(numberValidation),
       expiry: toStatus(expiryValidation),
