@@ -158,7 +158,7 @@ const POSTAL_CODE_INPUT_WIDTH = 70; // https://github.com/yannickcr/eslint-plugi
       defaultValues,
     } = this.props;
 
-    if(!values[field] && defaultValues[field]){
+    if((values[field] == null || values[field] == undefined) && defaultValues[field]){
       values[field] = defaultValues[field]
     }
 
