@@ -63,6 +63,12 @@ export default class CCInput extends Component {
     additionalInputProps: {},
   };
 
+  componentDidMount(){
+    if (this.props.value != null){
+      this.onBecomeFocused(true);
+    }
+  }
+
   onBecomeInvalid = () => {if(this.refs.input && this.refs.input.shake) this.refs.input.shake()}
   onBecomeFocused = (focus) => {
     Animated.timing(this.animatedValue, {
