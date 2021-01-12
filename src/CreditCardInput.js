@@ -248,6 +248,7 @@ const POSTAL_CODE_INPUT_WIDTH = 70; // https://github.com/yannickcr/eslint-plugi
               <View style={s.rowItem}>
                 <CCInput
                   {...this._inputProps("postalCode")}
+                  keyboardType={Platform.OS === 'ios' ? 'default' : 'visible-password'}
                   containerStyle={[s.inputContainer, inputContainerStyle]}
                 />
               </View>
@@ -256,6 +257,7 @@ const POSTAL_CODE_INPUT_WIDTH = 70; // https://github.com/yannickcr/eslint-plugi
               <View style={s.rowItem}>
                 <CCInput
                   {...this._inputProps("name")}
+                  keyboardType={Platform.OS === 'ios' ? 'default' : 'visible-password'}
                   containerStyle={[s.inputContainer, inputContainerStyle]}
                 />
               </View>
@@ -266,3 +268,4 @@ const POSTAL_CODE_INPUT_WIDTH = 70; // https://github.com/yannickcr/eslint-plugi
     );
   }
 }
+
